@@ -8,6 +8,9 @@ regsvr32 C:\ProgramData\Microsoft\VisualStudio\Setup\x64\Microsoft.VisualStudio.
 # Setup Git Credentials
 & "c:\steps\set_gitcredential.ps1"
 
+# Create .upmconfig.toml
+& "c:\steps\create_upmconfig.ps1"
+
 # Activate Unity
 & "c:\steps\activate.ps1"
 
