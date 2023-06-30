@@ -16,7 +16,7 @@ email = "arkadiusz.mirecki@everyrealm.com"
 alwaysAuth = true
 "@
 
-    $content | Out-File -FilePath $filePath -Encoding UTF8 -Force
+    $content | Out-File -FilePath $filePath -Encoding UTF8 -NoByteOrderMark-Force -Force 
     Write-Host "Unity .upmconfig.toml file created successfully at: $filePath"
 } catch {
     Write-Host "Failed to create Unity .upmconfig.toml file. Error: $($_.Exception.Message)"
