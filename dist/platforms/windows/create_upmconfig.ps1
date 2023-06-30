@@ -14,7 +14,7 @@ $content = @"
 token = "$token"
 email = "arkadiusz.mirecki@everyrealm.com"
 alwaysAuth = true
-@"
+"@
 
     $content | Out-File -FilePath $filePath -Encoding UTF8 -Force
     Write-Host "Unity .upmconfig.toml file created successfully at: $filePath"
