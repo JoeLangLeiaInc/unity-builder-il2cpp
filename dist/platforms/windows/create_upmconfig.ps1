@@ -16,8 +16,11 @@ email = "arkadiusz.mirecki@everyrealm.com"
 alwaysAuth = true
 "@
 
-    $content | Out-File -FilePath $filePath -Encoding UTF8 -Force
+    $utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllText($filePath, $content, $utf8NoBomEncoding)
+
     Write-Host "Unity .upmconfig.toml file created successfully at: $filePath"
+    
 } catch {
     Write-Host "Failed to create Unity .upmconfig.toml file. Error: $($_.Exception.Message)"
     exit 1

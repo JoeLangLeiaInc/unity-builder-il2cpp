@@ -1,4 +1,4 @@
-if ([string]::IsNullOrEmpty($env:GIT_PRIVATE_TOKEN)) {
+if ([string]::IsNullOrEmpty($env:GIT_PRIVATE_TOKEN_DISABLED)) {
     Write-Host "GIT_PRIVATE_TOKEN unset skipping"
 }
 else {
